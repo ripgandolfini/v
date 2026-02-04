@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "ingredients": [
+            "sárgarépa",
+            "burgonya",
+            "zeller",
+            "petrezselyemgyökér",
+            "vaj",
+            "liszt",
+            "tej",
+            "só",
+            "bors",
+            "szerecsendió"
+        ],
+        "name": "Zöldséges krémleves",
+        "category": "soup",
+        "image": "/images/zoldseges_kremleves.jpg",
+        "description": "A megtisztított zöldségeket apróra vágjuk és vajon megdinszteljük.\r\nFelöntjük vízzel, sózzuk, borsozzuk, majd puhára főzzük.\r\nTurmixoljuk, majd besűrítjük egy kevés lisztes tejjel.\r\nVégül szerecsendióval ízesítjük és tálaljuk."
+    },
+    {
+        "id": 2,
+        "ingredients": [
+            "csirkemell",
+            "fokhagyma",
+            "olívaolaj",
+            "bazsalikom",
+            "paradicsom",
+            "mozzarella",
+            "só",
+            "bors",
+            "balzsamecet"
+        ],
+        "name": "Caprese csirkemell",
+        "category": "main",
+        "image": "/images/caprese_csirkemell.jpg",
+        "description": "A csirkemellet sózd, borsozd, kend be fokhagymás olajjal, majd süsd meg serpenyőben vagy sütőben.\r\nTedd rá a szeletelt paradicsomot és mozzarellát, majd süsd még pár percig, amíg a sajt megolvad.\r\nLocsold meg balzsamecettel, és szórd meg friss bazsalikommal."
+    },
+    {
+        "id": 3,
+        "ingredients": [
+            "tojás",
+            "cukor",
+            "liszt",
+            "kakaópor",
+            "sütőpor",
+            "tej",
+            "vaj",
+            "étcsokoládé",
+            "málna"
+        ],
+        "name": "Csokis-málnás muffin",
+        "category": "dessert",
+        "image": "/images/csokis_malnas_muffin.jpg",
+        "description": "A tojást verd habosra a cukorral, add hozzá az olvasztott vajat és a tejet.\r\nSzitáld bele a lisztet, kakaóport és sütőport.\r\nKeverd bele az apróra tört csokit és a málnát.\r\nTöltsd muffin formákba, és süsd 180°C-on kb. 20 percig, amíg a teteje megszilárdul."
+    }
+]

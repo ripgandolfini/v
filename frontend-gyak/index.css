@@ -1,0 +1,67 @@
+/* grides formázás */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr, 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "title title title"
+    "card-1 card-2 card-3";
+    padding: 1rem; 
+    border: 1px solid black;
+}
+
+/* flexboxos formázás */
+
+.big{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* ez rendezi a div két szélére a gyerek-elemeket */
+    padding: 1rem;  
+    border: 1px solid black;
+}
+
+.mid1{
+    display: flex;
+    flex-direction: row; /**/ /* flex iránya: row */
+    justify-content: center; 
+    /* ebben a feladatban nem látszik, amit csinál, el is lehetne hagyni,
+    de egyébként ez rendezi vizszintesen az elemeket a row irányú flexnél */
+    align-items: center;
+    /*ez rendezi függőlegesen az elemeket a row irányú flexnél*/
+    gap: 1rem;    
+}
+
+.mid2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;     
+    align-items: center;
+    gap: 1rem;    
+}
+
+@media screen and (max-width: 768px){
+
+    /* grides formázás mobilra */
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "title"
+        "card-1" 
+        "card-2" 
+        "card-3";     
+    }
+
+    /* fexboxos formázás mobilra */
+    .big{
+        flex-direction: column;
+    }
+
+    .mid1{
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+}
