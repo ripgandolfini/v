@@ -5,8 +5,18 @@ C-be nem kell tudni mi történik a regiszterekkel, ezért magas szintű.
 Egy programozási nyelv interpreteres vagy fordítós.
 Interpreteres: csak az aktuális programsort fordítom le gép kóddá. (interpretálom az adott sort)
 Fordítós: az egész programot fordítom gép kóddá.
-A C az fordított (compileres). A fordításnak 2 szakasza van
+A C az fordított (compileres). A fordításnak 2 szakasza van:
 1. szakasz: compile -> forráskódból tárgykódot készít. (C-ból obj készül) Az obj fájlban gépi kód van, de a hivatkozások nincsenek lefordítva.
 Egy C fájlból 1 objekt fájl lesz. A programkód állhat több C fájlból, ezért lehet több obj fájl. Az obj fájlokból az exe-t a linker csinálja.
-A linker feloldja a hivatkozásokat (beilleszti a kódot) és mindent összemásol. Ami compileolt az gyors, ami interpretált az lassú.
+2. szakasz: A linker feloldja a hivatkozásokat (beilleszti a kódot) és mindent összemásol. Ami compileolt az gyors, ami interpretált az lassú.
 Cserébe nehezebben hordozható. Egy exe nehezebben átvihető egy másik gépre. Az interpretált könnyen átvihető a másik gépre.
+
+C könyv: https://colorcomputerarchive.com/repo/Documents/Books/The%20C%20Programming%20Language%20%28Kernighan%20Ritchie%29.pdf
+
+C alapú programozási nyelvekben a név identifier aláhúzásjellel, betüvel kezdődik, aláhuzásjellel, betüvel, számmal folytatódik.
+
+Minden C alapú programozási nyelvben a belépési pont a main() függvény. Tehát amit a mainbe írok, az a főprogram.
+A C alapú programozási nyelvekben valamiről onnan tudom, hogy valami függvény, hogy a név után zárójel van. A függvény 2 részből áll: feje, törzse.
+A függvény fejében a 2 kötelező rész: visszatérési típus (int, bool, void stb...) és név.
+A törzs blokk nyitó, és záró részt közt van. ({})
+Nyomkövetni (debug) F10, F11-el kell.
