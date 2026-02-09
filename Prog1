@@ -1,0 +1,12 @@
+A C magas szintű programozási nyelv. A magas szintűek közül, a legalacsonyabb szintű.
+Lehet benne drivert írni, frameworkot írni. Hardverközeli programok írására igazán jó.
+(pl mosógép, porszívó) Alacsony szintű programozási nyelv az assembly, aztán a gépi kód.
+C-be nem kell tudni mi történik a regiszterekkel, ezért magas szintű.
+Egy programozási nyelv interpreteres vagy fordítós.
+Interpreteres: csak az aktuális programsort fordítom le gép kóddá. (interpretálom az adott sort)
+Fordítós: az egész programot fordítom gép kóddá.
+A C az fordított (compileres). A fordításnak 2 szakasza van
+1. szakasz: compile -> forráskódból tárgykódot készít. (C-ból obj készül) Az obj fájlban gépi kód van, de a hivatkozások nincsenek lefordítva.
+Egy C fájlból 1 objekt fájl lesz. A programkód állhat több C fájlból, ezért lehet több obj fájl. Az obj fájlokból az exe-t a linker csinálja.
+A linker feloldja a hivatkozásokat (beilleszti a kódot) és mindent összemásol. Ami compileolt az gyors, ami interpretált az lassú.
+Cserébe nehezebben hordozható. Egy exe nehezebben átvihető egy másik gépre. Az interpretált könnyen átvihető a másik gépre.
