@@ -65,3 +65,5 @@
     }
 
 }
+/* .tartalom h2 { color: blue; font-size: 24px; }  Ez a tartalmon belüli összes h2-re vonatkozik */
+/* .tartalom > h2 { color:blue; font-size: 24px; } Ez csak a tartalom közvetlen gyerekeire */
