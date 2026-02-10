@@ -1,0 +1,61 @@
+namespace VersenyGUI
+{
+
+    public partial class MainWindow : Window
+    {
+        List<VersenyAdat> adatok = new List<VersenyAdat>();
+        private readonly string connectionString = "server = localhost;database= atletika;uid=root;password='';";
+        private readonly MySqlConnection connection;
+        public MainWindow()
+        {
+            InitializeComponent();
+            connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = connection;
+            myCommand.CommandText = "select Versenyszam, VersenyzoNev, Eredmeny, Nemzet from versenyekszamok inner join nemzetek on versenyekszamok.NemzetKod = nemzetek.NemzetId";
+            var reader = myCommand.ExecuteReader();
+            while (reader.Read()) {
+                VersenyAdat v = new VersenyAdat(reader);
+                adatok.Add(v);
+            }
+            connection.Close();
+            myDtg.ItemsSource = adatok;
+            myDtg.SelectedIndex = 0;
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = myDtg.SelectedIndex + 1;
+            
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = connection;
+            myCommand.CommandText = $"select Csucs from versenyekszamok where Id = {selected}";
+            var reader = myCommand.ExecuteReader();
+            string csucs = "";
+            while (reader.Read()) { 
+            csucs = reader.GetString(0);
+            }
+            connection.Close();
+            txtblock1.Text = Convert.ToString(csucs);
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            
+            connection.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = connection;
+            myCommand.CommandText = "select count(Id) from versenyekszamok inner join nemzetek on versenyekszamok.NemzetKod = nemzetek.NemzetId where Helyezes = '1' and nemzetek.Nemzet like 'Egyesült Államok'"; 
+            var reader = myCommand.ExecuteReader();
+            int usa = 0;
+            while (reader.Read())
+            {
+                usa = reader.GetInt32(0);
+            }
+            connection.Close();
+            txtblock2.Text = Convert.ToString(usa);
+        }
+    }
+}
